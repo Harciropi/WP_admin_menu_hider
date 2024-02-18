@@ -1,0 +1,273 @@
+/**
+ * css/less stylesheet
+ * 
+ * @version 2024.02.17.
+ * @package admin_menu_hider
+ * @author Soós András
+ */
+
+#admin_menu_hider_by_soos_andras_xd {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    cursor: default;
+    
+    .title_line {
+        position: relative;
+        display: block;
+        width: 100%;
+        min-height: 50px;
+        line-height: 30px;
+        padding: 10px 10px 10px 0px;
+        margin: 20px 0px 30px;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: left;
+    }
+    
+    .content_block {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: auto;
+        
+        .block_side {
+            position: relative;
+            display: inline-block;
+            vertical-align: top;
+            min-width: 415px;
+            width: 30%;
+            height: auto;
+            padding: 0px 25px 0px 0px;
+            
+            &:after {
+                content: '';
+                position: absolute;
+                display: block;
+                top: 0px;
+                right: 0px;
+                width: 1px;
+                height: 100%;
+                background-color: #666666;
+            }
+            
+            &.block_right_side {
+                padding: 0px 0px 0px 25px;
+            
+                &:after {
+                    left: -1px;
+                }
+            }
+            
+            .side_title {
+                position: relative;
+                display: block;
+                width: 100%;
+                min-height: 20px;
+                line-height: 20px;
+                margin: 0px 0px 20px;
+                font-size: 16px;
+                font-weight: bold;
+                text-align: left;
+            }
+            
+            .item_line {
+                position: relative;
+                display: block;
+                width: 100%;
+                min-height: 20px;
+                line-height: 16px;
+                margin-bottom: 5px;
+                padding: 2px 0px;
+                font-size: 14px;
+                text-align: left;
+                
+                &:hover {
+                    font-weight: bold;
+                }
+
+                &.menu_item {
+                    background-color: #CCCCCC;
+                    
+                    .arrow_toggle {
+                        display: none;
+                    }
+                    
+                    &.has_submenu .arrow_toggle {
+                        position: absolute;
+                        display: block;
+                        top: 2px;
+                        right: 2px;
+                        width: 60px;
+                        height: 20px;
+                        line-height: 20px;
+                        background: #666666;
+                        color: #FFFFFF;
+                        font-size: 18px;
+                        font-weight: bold;
+                        text-align: center;
+                        cursor: zoom-in;
+                        z-index: 1;
+                        
+                        &:after {
+                            content: '\2193';
+                        }
+                    }
+                    
+                    &.has_submenu.opened {
+                        .arrow_toggle {
+                            cursor: zoom-out;
+                            
+                            :after {
+                                content: '\2191';
+                            }
+                        }
+                        
+                        & + .submenu_block{
+                            max-height: 1000px;
+                            
+                            .submenu_item {
+                                background-color: #DFDFDF;
+                            }
+                        }
+                    }
+                }
+                
+                input,
+                label {
+                    position: relative;
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin: 0px;
+                    padding: 0px;
+                }
+                
+                input {
+                    width: 20px;
+                    height: 20px;
+                    margin: 0px 5px 0px 2px;
+                    
+                    &:before {
+                        width: 20px;
+                        height: 20px;
+                        margin: -1px 0px 0px -2px;
+                    }
+                }
+                
+                label {
+                    width: ~'calc(100% - 27px)';
+                    min-height: 20px;
+                    line-height: 20px;
+                }
+                
+                &.submenu_item {
+                    margin-left: 27px;
+                    width: ~'calc(100% - 27px)';
+                    
+                    label {
+                        width: ~'calc(100% - 27px)';
+                    }
+                }
+                
+                &.user_item.disabled {
+                    pointer-events: none;
+                }
+            }
+            
+            .submenu_block {
+                position: relative;
+                display: block;
+                max-height: 0px;
+                overflow: hidden;
+            }
+        }
+    }
+}
+
+#buy_me_a_coffee_donate,
+#linkedin_profile {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 45px;
+    
+    a {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 50px;
+    }
+}
+
+#buy_me_a_coffee_donate,{
+    a {
+        -webkit-transition: all .2s ease-out;
+                transition: all .2s ease-out;
+    }
+            
+    &:hover a {
+        scale: 1.01 1.1;
+    }
+}
+
+#linkedin_profile {
+    margin-left: 20px;
+    
+    img,
+    span {
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        -webkit-transition: all .2s ease-out;
+                transition: all .2s ease-out;
+    }
+    
+    &:hover {
+        img,
+        span {
+            scale: 1.1;
+        }
+    }
+    
+    span {
+        padding: 8px;
+        line-height: 16px;
+        font-weight: bold;
+    }
+}
+
+#wpfooter {
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+    height: 80px;
+    padding: 5px 20px;
+    overflow: hidden;
+    cursor: default;
+    
+    .foot_of_the_sheet {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding-top: 10px;
+        
+        a {
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        & > div {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 25px;
+            line-height: 25px;
+            padding: 0px;
+            
+            &.thigh {
+                color: purple;
+                font-weight: bold;
+            }
+        }
+    }
+}
