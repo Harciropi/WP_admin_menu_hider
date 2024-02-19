@@ -267,6 +267,7 @@ function hide_menu_items(&$plugin_datas)
 {
     if (!empty($plugin_datas))
     {
+        $chk = ''; // Check for success.
         $users_datas = users_datas_base64();
         foreach (array_keys($plugin_datas) as $page_datas)
         {
@@ -275,11 +276,27 @@ function hide_menu_items(&$plugin_datas)
                 $page_ids = explode('|',base64_decode($page_datas));
                 if (!empty($page_ids[1]))
                 {
-                    remove_submenu_page(base64_decode($page_ids[0]),$page_ids[1]);
+                    $page_ids[0] = base64_decode($page_ids[0]);
+                    if ($chk == $page_ids[0]) // If removing the main menu was unsuccessful, try the sub-menu IDs. Maybe that's what it changed to.
+                    {
+                        $chk = remove_menu_page($page_ids[1]);
+                        if ($chk === false)
+                        {
+                            $chk = $page_ids[0];
+                        }
+                    }
+                    else
+                    {
+                        remove_submenu_page(base64_decode($page_ids[0]),$page_ids[1]);
+                    }
                 }
                 else
                 {
-                    remove_menu_page($page_ids[0]);
+                    $chk = remove_menu_page($page_ids[0]);
+                    if ($chk === false)
+                    {
+                        $chk = $page_ids[0];
+                    }
                 }
             }
         }
