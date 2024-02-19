@@ -8,20 +8,20 @@ The content of the entire branch is supplemented with additional codes that serv
 
 The Plugin includes the following files and directories:
 
-* `only_plugin_file`. folder contains only the plugin file that you can upload to your plugins.
-* `less`. folder for the styling file with LESS code.
-* `css`. folder for the CSS file that compiled from LESS file.
-* `js`. folder for the scripts that include JS/jQuery files.
-* `src`. folder for other things. Currently here is a linkedin logo and the extremely useful utilphp collection.
-* `admin_menu_hider.php`. the file that the core of this plugin.
-* `util.php`. the file that kick in the utilphp engine. (Thank you [Brandon](https://github.com/brandonwamboldt)!)
-* `README.md`. the file that you’re currently reading.
-* 
+* `only_plugin_file` folder contains only the plugin file that you can upload to your plugins.
+* `less` folder for the styling file with LESS code.
+* `css` folder for the CSS file that compiled from LESS file.
+* `js` folder for the scripts that include JS/jQuery files.
+* `src` folder for other things. Currently here is a linkedin logo and the extremely useful utilphp collection.
+* `admin_menu_hider.php` the file that the core of this plugin.
+* `util.php` the file that kick in the utilphp engine. (Thank you [Brandon](https://github.com/brandonwamboldt)!)
+* `README.md` the file that you’re currently reading.
+* `LICENSE` the file that contains the GNU GPL v2 license.
 
 ## License
 
-The ADmin Menu Hider plugin is licensed under the GPL v2.
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+The ADMIN MENU HIDER plugin is licensed under the GNU GPL v2.
+License URI: [http://www.gnu.org/licenses/gpl-2.0.html](http://www.gnu.org/licenses/gpl-2.0.html)
 
 ## Donation
 
