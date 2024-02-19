@@ -17,7 +17,7 @@ function amh_init()
         $(this).parent().toggleClass('opened');
     });
     
-    $('.menu_item.has_submenu').on('change', function(e){
+    $('.menu_item.has_submenu').on('change', function(){
         if ($(this).find(':input:checked').length>0)
         {
             $(this).next('.submenu_block').find(':input:not(:checked)').prop('checked',true);
@@ -25,6 +25,20 @@ function amh_init()
         else
         {
             $(this).next('.submenu_block').find(':input:checked').prop('checked',false);
+        }
+    });
+    
+    $('.submenu_item > input').on('change', function(){
+        let parent = $(this).parents('.submenu_block');
+        let chk_chkbox = parent.find(':input:checked').length;
+        let all_chkbox = parent.find(':input').length;
+        if (chk_chkbox == all_chkbox)
+        {
+            parent.prev('.has_submenu').children(':input').prop('checked',true);
+        }
+        else
+        {
+            parent.prev('.has_submenu').children(':input').prop('checked',false);
         }
     });
 }
