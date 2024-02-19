@@ -21,7 +21,7 @@ The Plugin includes the following files and directories:
 ## License
 
 The ADMIN MENU HIDER plugin is licensed under the GNU GPL v2. \
-License URI: [http://www.gnu.org/licenses/gpl-2.0.html](http://www.gnu.org/licenses/gpl-2.0.html)
+License URI: [http://www.gnu.org/licenses/gpl-2.0.html](https://www.gnu.org/licenses/gpl-2.0.html)
 
 ## Donation
 
