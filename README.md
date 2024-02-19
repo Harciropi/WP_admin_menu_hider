@@ -2,7 +2,7 @@
 
 This Wordpress plugin hides selected admin menu or sub-menu items from other users whose you want. \
 If you want just the plugin file for wordpress, you can download it from releases menu. \
-The content of the entire branch is supplemented with additional codes that serve upgrade purposes. \
+The content of the entire branch is supplemented with additional codes that serve upgrade purposes.
 
 ## Contents
 
@@ -27,5 +27,5 @@ License URI: [http://www.gnu.org/licenses/gpl-2.0.html](http://www.gnu.org/licen
 
 If you are an incredibly kind person, you can donate to my brain some coffee... :D \
 [Buy me a coffee](https://www.buymeacoffee.com/harciropi) \
-<br> \
+<br>
 THANK YOU!
