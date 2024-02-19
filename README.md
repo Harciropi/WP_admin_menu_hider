@@ -26,6 +26,6 @@ License URI: [http://www.gnu.org/licenses/gpl-2.0.html](http://www.gnu.org/licen
 ## Donation
 
 If you are an incredibly kind person, you can donate to my brain some coffee... :D \
-[Buy me a coffee](https://www.buymeacoffee.com/harciropi) \
+[Buy me a coffee](https://www.buymeacoffee.com/harciropi/target="_blank") \
 <br>
 THANK YOU!
