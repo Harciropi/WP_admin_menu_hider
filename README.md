@@ -2,7 +2,7 @@
 
 This Wordpress plugin hides selected admin menu or sub-menu items from other users whose you want. \
 If you want just the plugin file for wordpress, you can download it from releases menu. \
-The content of the entire branch is supplemented with additional codes that serve upgrade purposes.
+The content of the entire branch is supplemented with additional codes that serve development purposes.
 
 ## Contents
 
