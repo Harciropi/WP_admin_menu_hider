@@ -4,8 +4,9 @@
  * Plugin Name: Admin menu hider
  * Plugin URI: https://github.com/Harciropi/WP_admin_menu_hider
  * Description: This plugin hides selected admin menu or sub-menu items from other users whose you want.
- * Version: 1.0
- * Release Date: 2024.02.17.
+ * Version: 1.2
+ * Release Date: 2024.02.20.
+ * Since: 2024.02.17.
  * Author: Soós András
  * Author URI: https://linkedin.com/in/soosandras-harciropi
  * License: GPLv2
