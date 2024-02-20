@@ -146,39 +146,45 @@ function add_plugin_links($links = array())
 add_filter('plugin_action_links_'.plugin_basename(__FILE__), 'add_plugin_links');
 
 function add_script_n_style() {
-    wp_enqueue_script('admin-scripts', plugin_dir_url( __FILE__ ) . 'js/amh_script.js');
-    wp_enqueue_style('admin-styles', plugin_dir_url( __FILE__ ) . 'css/amh_style.css');
+    wp_enqueue_script('admin-scripts', plugin_dir_url( __FILE__ ) . 'js/amh_script.js', array(), '1.0.0', array('in_footer'=>true));
+    wp_enqueue_style('admin-styles', plugin_dir_url( __FILE__ ) . 'css/amh_style.css', array(), '1.0.0');
 }
 add_action('admin_enqueue_scripts', 'add_script_n_style');
 
 function admin_menu_hider_settings_page() {
     if (!current_user_can( 'manage_options' ) ) {
-        wp_die( __( 'You do not have sufficient permissions to access this page!' ) );
+        wp_die('You do not have sufficient permissions to access this page!');
     }
     
     $users_datas = users_datas();
     $menu_datas = menu_datas();
     
-    if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST['submit']))
+    if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_REQUEST['_wpnonce']) && !empty($_POST['submit']))
     {
-        $option_update = array();
-        foreach ($_POST as $field => $value)
+        if (!empty(wp_verify_nonce($_REQUEST['_wpnonce'],'amh-setopt')))
         {
-            if ($field != 'submit')
+            $option_update = array();
+            foreach ($_POST as $field => $value)
             {
-                $option_update[$field] = $value;
+                if ($field != 'submit')
+                {
+                    $option_update[$field] = $value;
+                }
             }
-        }
-        $success = update_option('admin_menu_hider_settings_options', $option_update);
+            $success = update_option('admin_menu_hider_settings_options', $option_update);
         
-        if ($success === true)
-        {
-            
+            if ($success === true)
+            {
+                /** <TODO> Admin notices. */
+            }
         }
     }
     $option_update = get_option('admin_menu_hider_settings_options');
     
-    $return = '<form action="" method="post"><div id="admin_menu_hider_by_soos_andras_xd" class="wrap">';
+    $create_nonce = wp_create_nonce('amh-setopt');
+    $get_url = home_url(add_query_arg(null,null));
+    $action_url = $get_url . (stristr($get_url,'?') ? '&' : '?') . '_wpnonce=' . $create_nonce;
+    $return = '<form action="' . $action_url . '" method="post"><div id="admin_menu_hider_by_soos_andras_xd" class="wrap">';
         $return.= '<div class="title_line" >ADMIN MENU HIDER<br>SETTINGS</div>';
         $return.= '<div class="content_block" >';
         if (!empty($menu_datas))
@@ -242,15 +248,21 @@ function admin_menu_hider_settings_page() {
         $return.= '</div>'; //content_block
     $return.= '</div>'; //admin_menu_hider_by_soos_andras_xd
     
-    echo $return;
+    echo wp_kses($return,array(
+        'form' => array('action'=>array(),'method'=>array()),
+        'div' => array('id'=>array(),'class'=>array()),
+        'input' => array('type'=>array(),'id'=>array(),'name'=>array(),'value'=>array(),'checked'=>array()),
+        'label' => array('for'=>array()),
+        'i' => array('style'=>array()),
+    ));
     do_settings_sections('admin-menu-hider-settings');
     submit_button();
-    echo '</form>';
+    echo wp_kses('</form>',array('form'));
     
     $text = "I'm always sleepy... :)";
-    $donation = '<div id="buy_me_a_coffee_donate"><a href="https://www.buymeacoffee.com/harciropi" target="_blank"><img src="https://img.buymeacoffee.com/button-api/?text=' . $text . '&emoji=☕&slug=harciropi&button_colour=5F7FFF&font_colour=ffffff&font_family=Bree&outline_colour=000000&coffee_colour=FFDD00" /></a></div>';
-    $donation.= '<div id="linkedin_profile"><a href="linkedin.com/in/soosandras-harciropi"><img src="' . plugin_dir_url( __FILE__ ) . 'src\li.svg' . '"><span>Soós<br>András</span></a></div>';
-    echo $donation;
+    $donation = '<div id="buy_me_a_coffee_donate"><a href="' . esc_url('https://www.buymeacoffee.com/harciropi') . '" target="_blank"><img src="https://img.buymeacoffee.com/button-api/?text=' . $text . '&emoji=☕&slug=harciropi&button_colour=5F7FFF&font_colour=ffffff&font_family=Bree&outline_colour=000000&coffee_colour=FFDD00" /></a></div>';
+    $donation.= '<div id="linkedin_profile"><a href="' . esc_url('https://linkedin.com/in/soosandras-harciropi') . '"><img src="' . plugin_dir_url( __FILE__ ) . 'src\li.svg' . '" /><span>Soós<br>András</span></a></div>';
+    echo wp_kses_post($donation);
     
     add_filter('admin_footer_text', 'add_footer_content');
 }
@@ -258,10 +270,10 @@ function admin_menu_hider_settings_page() {
 function add_footer_content() {
     $footer_content = '<div class="foot_of_the_sheet">';
         $footer_content.= '<div class="thigh">If you invited me for a coffee, you are the best face in the world! :) Thank YOU!</div>';
-        $footer_content.= '<div class="calf">Technical connection, bug report or any other wish: <a href="mailto:mail@soosandras.hu">mail@soosandras.hu</a></div>';
+        $footer_content.= '<div class="calf">Technical connection, bug report or any other wish: <a href="' . esc_url('mailto:mail@soosandras.hu') . '">mail@soosandras.hu</a></div>';
     $footer_content.= '</div>'; //foot_of_the_sheet
     
-    echo $footer_content;
+    echo wp_kses_post($footer_content);
 }
 
 function hide_menu_items(&$plugin_datas)

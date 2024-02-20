@@ -107,7 +107,7 @@
 #admin_menu_hider_by_soos_andras_xd .content_block .block_side .item_line.menu_item.has_submenu.opened .arrow_toggle {
   cursor: zoom-out;
 }
-#admin_menu_hider_by_soos_andras_xd .content_block .block_side .item_line.menu_item.has_submenu.opened .arrow_toggle :after {
+#admin_menu_hider_by_soos_andras_xd .content_block .block_side .item_line.menu_item.has_submenu.opened .arrow_toggle:after {
   content: '\2191';
 }
 #admin_menu_hider_by_soos_andras_xd .content_block .block_side .item_line.menu_item.has_submenu.opened + .submenu_block {
