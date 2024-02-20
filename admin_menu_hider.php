@@ -287,7 +287,7 @@ function hide_menu_items(&$plugin_datas)
                     }
                     else
                     {
-                        remove_submenu_page(base64_decode($page_ids[0]),$page_ids[1]);
+                        remove_submenu_page($page_ids[0],$page_ids[1]);
                     }
                 }
                 else
