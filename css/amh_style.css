@@ -5,13 +5,13 @@
  * @package admin_menu_hider
  * @author Soós András
  */
-#admin_menu_hider_by_soos_andras_xd {
+.toplevel_page_admin-menu-hider-settings #admin_menu_hider_by_soos_andras_xd {
   box-sizing: border-box;
   position: relative;
   display: block;
   cursor: default;
 }
-#admin_menu_hider_by_soos_andras_xd .title_line {
+.toplevel_page_admin-menu-hider-settings #admin_menu_hider_by_soos_andras_xd .title_line {
   position: relative;
   display: block;
   width: 100%;
@@ -23,13 +23,13 @@
   font-weight: bold;
   text-align: left;
 }
-#admin_menu_hider_by_soos_andras_xd .content_block {
+.toplevel_page_admin-menu-hider-settings #admin_menu_hider_by_soos_andras_xd .content_block {
   position: relative;
   display: block;
   width: 100%;
   height: auto;
 }
-#admin_menu_hider_by_soos_andras_xd .content_block .block_side {
+.toplevel_page_admin-menu-hider-settings #admin_menu_hider_by_soos_andras_xd .content_block .block_side {
   position: relative;
   display: inline-block;
   vertical-align: top;
@@ -38,7 +38,7 @@
   height: auto;
   padding: 0px 25px 0px 0px;
 }
-#admin_menu_hider_by_soos_andras_xd .content_block .block_side:after {
+.toplevel_page_admin-menu-hider-settings #admin_menu_hider_by_soos_andras_xd .content_block .block_side:after {
   content: '';
   position: absolute;
   display: block;
@@ -48,13 +48,13 @@
   height: 100%;
   background-color: #666666;
 }
-#admin_menu_hider_by_soos_andras_xd .content_block .block_side.block_right_side {
+.toplevel_page_admin-menu-hider-settings #admin_menu_hider_by_soos_andras_xd .content_block .block_side.block_right_side {
   padding: 0px 0px 0px 25px;
 }
-#admin_menu_hider_by_soos_andras_xd .content_block .block_side.block_right_side:after {
+.toplevel_page_admin-menu-hider-settings #admin_menu_hider_by_soos_andras_xd .content_block .block_side.block_right_side:after {
   left: -1px;
 }
-#admin_menu_hider_by_soos_andras_xd .content_block .block_side .side_title {
+.toplevel_page_admin-menu-hider-settings #admin_menu_hider_by_soos_andras_xd .content_block .block_side .side_title {
   position: relative;
   display: block;
   width: 100%;
@@ -65,7 +65,7 @@
   font-weight: bold;
   text-align: left;
 }
-#admin_menu_hider_by_soos_andras_xd .content_block .block_side .item_line {
+.toplevel_page_admin-menu-hider-settings #admin_menu_hider_by_soos_andras_xd .content_block .block_side .item_line {
   position: relative;
   display: block;
   width: 100%;
@@ -76,16 +76,16 @@
   font-size: 14px;
   text-align: left;
 }
-#admin_menu_hider_by_soos_andras_xd .content_block .block_side .item_line:hover {
+.toplevel_page_admin-menu-hider-settings #admin_menu_hider_by_soos_andras_xd .content_block .block_side .item_line:hover {
   font-weight: bold;
 }
-#admin_menu_hider_by_soos_andras_xd .content_block .block_side .item_line.menu_item {
+.toplevel_page_admin-menu-hider-settings #admin_menu_hider_by_soos_andras_xd .content_block .block_side .item_line.menu_item {
   background-color: #CCCCCC;
 }
-#admin_menu_hider_by_soos_andras_xd .content_block .block_side .item_line.menu_item .arrow_toggle {
+.toplevel_page_admin-menu-hider-settings #admin_menu_hider_by_soos_andras_xd .content_block .block_side .item_line.menu_item .arrow_toggle {
   display: none;
 }
-#admin_menu_hider_by_soos_andras_xd .content_block .block_side .item_line.menu_item.has_submenu .arrow_toggle {
+.toplevel_page_admin-menu-hider-settings #admin_menu_hider_by_soos_andras_xd .content_block .block_side .item_line.menu_item.has_submenu .arrow_toggle {
   position: absolute;
   display: block;
   top: 2px;
@@ -101,102 +101,102 @@
   cursor: zoom-in;
   z-index: 1;
 }
-#admin_menu_hider_by_soos_andras_xd .content_block .block_side .item_line.menu_item.has_submenu .arrow_toggle:after {
+.toplevel_page_admin-menu-hider-settings #admin_menu_hider_by_soos_andras_xd .content_block .block_side .item_line.menu_item.has_submenu .arrow_toggle:after {
   content: '\2193';
 }
-#admin_menu_hider_by_soos_andras_xd .content_block .block_side .item_line.menu_item.has_submenu.opened .arrow_toggle {
+.toplevel_page_admin-menu-hider-settings #admin_menu_hider_by_soos_andras_xd .content_block .block_side .item_line.menu_item.has_submenu.opened .arrow_toggle {
   cursor: zoom-out;
 }
-#admin_menu_hider_by_soos_andras_xd .content_block .block_side .item_line.menu_item.has_submenu.opened .arrow_toggle:after {
+.toplevel_page_admin-menu-hider-settings #admin_menu_hider_by_soos_andras_xd .content_block .block_side .item_line.menu_item.has_submenu.opened .arrow_toggle:after {
   content: '\2191';
 }
-#admin_menu_hider_by_soos_andras_xd .content_block .block_side .item_line.menu_item.has_submenu.opened + .submenu_block {
+.toplevel_page_admin-menu-hider-settings #admin_menu_hider_by_soos_andras_xd .content_block .block_side .item_line.menu_item.has_submenu.opened + .submenu_block {
   max-height: 1000px;
 }
-#admin_menu_hider_by_soos_andras_xd .content_block .block_side .item_line.menu_item.has_submenu.opened + .submenu_block .submenu_item {
+.toplevel_page_admin-menu-hider-settings #admin_menu_hider_by_soos_andras_xd .content_block .block_side .item_line.menu_item.has_submenu.opened + .submenu_block .submenu_item {
   background-color: #DFDFDF;
 }
-#admin_menu_hider_by_soos_andras_xd .content_block .block_side .item_line input,
-#admin_menu_hider_by_soos_andras_xd .content_block .block_side .item_line label {
+.toplevel_page_admin-menu-hider-settings #admin_menu_hider_by_soos_andras_xd .content_block .block_side .item_line input,
+.toplevel_page_admin-menu-hider-settings #admin_menu_hider_by_soos_andras_xd .content_block .block_side .item_line label {
   position: relative;
   display: inline-block;
   vertical-align: middle;
   margin: 0px;
   padding: 0px;
 }
-#admin_menu_hider_by_soos_andras_xd .content_block .block_side .item_line input {
+.toplevel_page_admin-menu-hider-settings #admin_menu_hider_by_soos_andras_xd .content_block .block_side .item_line input {
   width: 20px;
   height: 20px;
   margin: 0px 5px 0px 2px;
 }
-#admin_menu_hider_by_soos_andras_xd .content_block .block_side .item_line input:before {
+.toplevel_page_admin-menu-hider-settings #admin_menu_hider_by_soos_andras_xd .content_block .block_side .item_line input:before {
   width: 20px;
   height: 20px;
   margin: -1px 0px 0px -2px;
 }
-#admin_menu_hider_by_soos_andras_xd .content_block .block_side .item_line label {
+.toplevel_page_admin-menu-hider-settings #admin_menu_hider_by_soos_andras_xd .content_block .block_side .item_line label {
   width: calc(100% - 27px);
   min-height: 20px;
   line-height: 20px;
 }
-#admin_menu_hider_by_soos_andras_xd .content_block .block_side .item_line.submenu_item {
+.toplevel_page_admin-menu-hider-settings #admin_menu_hider_by_soos_andras_xd .content_block .block_side .item_line.submenu_item {
   margin-left: 27px;
   width: calc(100% - 27px);
 }
-#admin_menu_hider_by_soos_andras_xd .content_block .block_side .item_line.submenu_item label {
+.toplevel_page_admin-menu-hider-settings #admin_menu_hider_by_soos_andras_xd .content_block .block_side .item_line.submenu_item label {
   width: calc(100% - 27px);
 }
-#admin_menu_hider_by_soos_andras_xd .content_block .block_side .item_line.user_item.disabled {
+.toplevel_page_admin-menu-hider-settings #admin_menu_hider_by_soos_andras_xd .content_block .block_side .item_line.user_item.disabled {
   pointer-events: none;
 }
-#admin_menu_hider_by_soos_andras_xd .content_block .block_side .submenu_block {
+.toplevel_page_admin-menu-hider-settings #admin_menu_hider_by_soos_andras_xd .content_block .block_side .submenu_block {
   position: relative;
   display: block;
   max-height: 0px;
   overflow: hidden;
 }
-#buy_me_a_coffee_donate,
-#linkedin_profile {
+.toplevel_page_admin-menu-hider-settings #buy_me_a_coffee_donate,
+.toplevel_page_admin-menu-hider-settings #linkedin_profile {
   position: relative;
   display: inline-block;
   vertical-align: middle;
   margin-bottom: 45px;
 }
-#buy_me_a_coffee_donate a,
-#linkedin_profile a {
+.toplevel_page_admin-menu-hider-settings #buy_me_a_coffee_donate a,
+.toplevel_page_admin-menu-hider-settings #linkedin_profile a {
   position: relative;
   display: block;
   width: 100%;
   height: 50px;
 }
-#buy_me_a_coffee_donate a {
+.toplevel_page_admin-menu-hider-settings #buy_me_a_coffee_donate a {
   -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
-#buy_me_a_coffee_donate:hover a {
+.toplevel_page_admin-menu-hider-settings #buy_me_a_coffee_donate:hover a {
   scale: 1.01 1.1;
 }
-#linkedin_profile {
+.toplevel_page_admin-menu-hider-settings #linkedin_profile {
   margin-left: 20px;
 }
-#linkedin_profile img,
-#linkedin_profile span {
+.toplevel_page_admin-menu-hider-settings #linkedin_profile img,
+.toplevel_page_admin-menu-hider-settings #linkedin_profile span {
   position: relative;
   display: inline-block;
   vertical-align: top;
   -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
-#linkedin_profile:hover img,
-#linkedin_profile:hover span {
+.toplevel_page_admin-menu-hider-settings #linkedin_profile:hover img,
+.toplevel_page_admin-menu-hider-settings #linkedin_profile:hover span {
   scale: 1.1;
 }
-#linkedin_profile span {
+.toplevel_page_admin-menu-hider-settings #linkedin_profile span {
   padding: 8px;
   line-height: 16px;
   font-weight: bold;
 }
-#wpfooter {
+.toplevel_page_admin-menu-hider-settings #wpfooter {
   box-sizing: border-box;
   background-color: #FFFFFF;
   height: 80px;
@@ -204,18 +204,18 @@
   overflow: hidden;
   cursor: default;
 }
-#wpfooter .foot_of_the_sheet {
+.toplevel_page_admin-menu-hider-settings #wpfooter .foot_of_the_sheet {
   position: relative;
   display: block;
   width: 100%;
   height: 100%;
   padding-top: 10px;
 }
-#wpfooter .foot_of_the_sheet a {
+.toplevel_page_admin-menu-hider-settings #wpfooter .foot_of_the_sheet a {
   text-decoration: none;
   font-weight: bold;
 }
-#wpfooter .foot_of_the_sheet > div {
+.toplevel_page_admin-menu-hider-settings #wpfooter .foot_of_the_sheet > div {
   position: relative;
   display: block;
   width: 100%;
@@ -223,7 +223,7 @@
   line-height: 25px;
   padding: 0px;
 }
-#wpfooter .foot_of_the_sheet > div.thigh {
+.toplevel_page_admin-menu-hider-settings #wpfooter .foot_of_the_sheet > div.thigh {
   color: purple;
   font-weight: bold;
 }
